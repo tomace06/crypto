@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Suivi de prix de crypto-monnaie</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 2000px;
+      margin: 0 auto;
+    }
+
+    th,
+    td {
+      text-align: center;
+      padding: 10px;
+      border: 1px solid black;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+      background-color: #ffffff;
+    }
+
+    tr:hover {
+      background-color: #e6e6e6;
+    }
+
+    /*td:first-child { */
+    /*  text-align: left; */
+    /*} */
+
+    td:nth-child(n+2):nth-child(-n+7) {
+      /* colonnes verticales */
+    }
+
+    tr:first-child td {
+      /* première ligne horizontale */
+    }
+
+    tr:last-child td {
+      /* dernière ligne horizontale */
+    }
+  </style>
+  
+</head>
+
+<body>
+  <h1>Suivi de prix de crypto-monnaie</h1>
+  <table>
+    <tr>
+      <th>Actions</th>
+      <th>Nom de la crypto-monnaie</th>
+      <th>Long ou short</th>
+      <th>Seuil d'alerte de prix (en USD)</th>
+      <th>Actions</th>
+      <th>Seuil d'alerte de prix (en USD)</th>
+      <th>Heurs de déclangage</th>
+    </tr>
+    <tr>
+      <td>
+        <button onclick="stopMonitoring()">Arrêter le suivi</button>
+      </td>
+      <td>
+        <input type="text" id="crypto-name" name="crypto-name">
+      </td>
+      <td>
+        <input type="text" id="ls" name="ls" name="ls2">
+      </td>
+      <td>
+        <input type="number" id="alert-price" name="alert-price">
+      </td>
+      <td>
+        <button onclick="startMonitoring()">Démarrer le suivi</button>
+      </td>
+      <td>
+        <div id="price-info"></div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button onclick="stopMonitoring1()">Arrêter le suivi</button>
+      </td>
+      <td>
+        <input type="text" id="crypto-name1" name="crypto-name1">
+      </td>
+      <td>
+        <input type="text" id="ls5" name="ls5" name="ls2_1">
+      </td>
+      <td>
+        <input type="number" id="alert-price1" name="alert-price1">
+      </td>
+      <td>
+        <button onclick="startMonitoring1()">Démarrer le suivi</button>
+      </td>
+      <td>
+        <div id="price-info1"></div>
+      </td>
+    </tr>
+  </table>
+  
+  <script src="u.js"></script>
+  <script src="u2.js"></script>
+
+</body>
+</html>
